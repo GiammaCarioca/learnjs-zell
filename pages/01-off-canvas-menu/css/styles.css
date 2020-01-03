@@ -40,6 +40,11 @@ h1 {
 	width: 14rem;
 	background-color: var(--menuBackgroundColor);
 	transition: transform 0.3s ease-out;
+	visibility: hidden;
+}
+
+.offsite-is-open .offsite-container {
+	visibility: visible;
 }
 
 .offsite-is-open .site-container,
@@ -87,11 +92,39 @@ button:focus,
 }
 
 .nav a:hover {
-	background-color: #010b13;
+	background-color: #010711;
 }
 
 .nav a:hover,
 .nav a:focus,
 .nav a:active {
 	color: var(--menuTextHoverColor);
+}
+
+.nav .close-button {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+
+.nav .close-button svg {
+	width: 1rem;
+	fill: var(--menuTextColor);
+}
+
+.nav .close-button:hover svg,
+.nav .close-button:focus svg {
+	fill: var(--menuTextHoverColor);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	white-space: nowrap;
 }
